@@ -1,0 +1,27 @@
+# In vdsp-audio/vd-1 (the public repo: releases and issues). The site's source is private.
+#
+# When a release is published in vdsp-audio/vd-1, it asks Netlify to rebuild the site, so the release
+# shows on /news and the home page within minutes (release handoff B2). The site's build
+# (node build-news.js) then reads the release from the GitHub API.
+#
+# Setup, once, in vdsp-audio/vd-1 › Settings › Secrets and variables › Actions:
+#   NETLIFY_BUILD_HOOK = the URL from Netlify › Site configuration › Build & deploy › Build hooks
+#                        (a hook on branch main). Keep it secret: anyone with it can trigger builds.
+name: Rebuild the site
+
+on:
+  release:
+    types: [published]
+
+permissions: {}
+
+jobs:
+  hook:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Call the Netlify build hook
+        env:
+          HOOK: ${{ secrets.NETLIFY_BUILD_HOOK }}
+        run: |
+          if [ -z "$HOOK" ]; then echo "::error::the NETLIFY_BUILD_HOOK secret is not set"; exit 1; fi
+          curl --fail --silent --show-error --max-time 30 -X POST -d '{}' "$HOOK"

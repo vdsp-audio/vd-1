@@ -1,0 +1,12 @@
+name: Idea
+description: Suggest a feature or a change
+title: "[Idea]: "
+labels: ["idea"]
+body:
+  - type: textarea
+    id: idea
+    attributes:
+      label: The idea
+      description: What you would like VD-1 to do, and what you would use it for.
+    validations:
+      required: true

@@ -1,0 +1,46 @@
+name: Bug report
+description: Something in VD-1 does not work as it should
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: VD-1 version
+      description: Shown in the About panel (the i button on the board).
+      placeholder: "1.0.0"
+    validations:
+      required: true
+  - type: input
+    id: host
+    attributes:
+      label: Host and version
+      placeholder: "Bitwig Studio 5.2"
+    validations:
+      required: true
+  - type: input
+    id: os
+    attributes:
+      label: macOS version and Mac
+      placeholder: "macOS 15.1, M2"
+    validations:
+      required: true
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+      description: What you did, what you expected, and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Load VD-1 on an instrument track
+        2. ...
+  - type: textarea
+    id: more
+    attributes:
+      label: Anything else
+      description: Screenshots, a short audio clip, a project file (drag them here).
