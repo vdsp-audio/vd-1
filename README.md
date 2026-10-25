@@ -16,7 +16,7 @@ The first release is not out yet. When it is, it will be here:
 | macOS (CLAP) | [`VD-1-macOS-CLAP.zip`](https://github.com/vdsp-audio/vd-1/releases/latest/download/VD-1-macOS-CLAP.zip) |
 
 Install: unzip, move `VD-1.clap` into `~/Library/Audio/Plug-Ins/CLAP/`, rescan plugins in your
-host. The website has the full steps, including what to do if macOS blocks the plugin.
+host. The plugin is signed and notarized by Apple, so macOS opens it without a warning.
 
 ## Feedback
 
@@ -26,7 +26,9 @@ host. The website has the full steps, including what to do if macOS blocks the p
 
 ## License
 
-To be announced with the first release.
+VD-1 is freeware: free to use, including commercially, and what you make with it is yours. It is
+not open source, and it may not be redistributed. See [LICENSE.md](LICENSE.md) and
+[THIRD-PARTY-NOTICES.md](THIRD-PARTY-NOTICES.md).
 
 ---
 
