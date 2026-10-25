@@ -48,7 +48,7 @@ under their own terms, which this licence does not restrict.
 
 ## 5. Official sources
 
-The software is distributed only through https://vdsp-audio.netlify.app and the releases of
+The software is distributed only through https://vdsp-audio.com and the releases of
 https://github.com/vdsp-audio/vd-1. Copies from elsewhere may be altered, and vdsp-audio gives no
 support for them.
 
@@ -95,5 +95,5 @@ bring a claim there.
 
 ## 13. Contact
 
-vdsp-audio, operated by Carmelo Scozzola, Italy. Licence questions and refunds: legal@compilr.dev.
+vdsp-audio, operated by Carmelo Scozzola, Italy. Licence questions and refunds: legal@vdsp-audio.com.
 Bug reports: https://github.com/vdsp-audio/vd-1/issues.

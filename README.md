@@ -3,7 +3,7 @@
 A lo-fi drum machine plugin built around a simulated DSP chip: swap the chips, load different
 firmware. CLAP, macOS first.
 
-**Website:** https://vdsp-audio.netlify.app
+**Website:** https://vdsp-audio.com
 
 This repository holds the releases and the issue tracker. The source code is not public.
 
