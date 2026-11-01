@@ -1,0 +1,69 @@
+VD-1: installing
+
+VD-1 comes in one download per system. Each holds the plugin formats for
+that system: install the ones your DAW uses, then rescan the plugins in
+your DAW, or restart it.
+
+  VD-1-macOS.zip             macOS 12 or later, Apple silicon or Intel: CLAP, VST3, AU
+  VD-1-Windows.zip           Windows 10 or 11, x64: CLAP, VST3
+  VD-1-Linux-x86_64.tar.gz   Linux x86_64: CLAP, VST3
+
+Download: https://github.com/vdsp-audio/vd-1/releases/latest
+
+
+macOS
+-----
+
+Each format goes in its own folder of your user Library:
+
+  VD-1.clap       ->  ~/Library/Audio/Plug-Ins/CLAP/
+  VD-1.vst3       ->  ~/Library/Audio/Plug-Ins/VST3/
+  VD-1.component  ->  ~/Library/Audio/Plug-Ins/Components/   (Audio Unit)
+
+In Finder: Go > Go to Folder..., type ~/Library/Audio/Plug-Ins, and drag
+each bundle into its folder (make the folder if it is not there yet).
+Logic and GarageBand check a new Audio Unit at their next start.
+
+The plugins are signed and notarized by Apple: no security warning is
+expected.
+
+
+Windows
+-------
+
+Copy each format into its shared folder (this needs administrator rights):
+
+  VD-1.clap  ->  C:\Program Files\Common Files\CLAP\
+  VD-1.vst3  ->  C:\Program Files\Common Files\VST3\
+
+Without administrator rights, use the per-user folders instead:
+
+  VD-1.clap  ->  %LOCALAPPDATA%\Programs\Common\CLAP\
+  VD-1.vst3  ->  %LOCALAPPDATA%\Programs\Common\VST3\
+
+The plugin is not signed. The panel needs the Microsoft Edge WebView2
+Runtime: Windows 11 and current Windows 10 already have it. Tested in
+Bitwig Studio and REAPER.
+
+
+Linux
+-----
+
+  VD-1.clap and VD-1-editor  ->  ~/.clap/
+  VD-1.vst3                  ->  ~/.vst3/
+
+VD-1-editor is the panel's helper: keep it next to VD-1.clap, in the
+same folder.
+
+The panel needs WebKitGTK 4.1:
+
+  Arch            sudo pacman -S webkit2gtk-4.1
+  Debian, Ubuntu  sudo apt install libwebkit2gtk-4.1-0
+  Fedora          sudo dnf install webkit2gtk4.1
+
+Without it VD-1 still plays, and your DAW shows its generic parameter
+sliders instead of the panel. Tested in Bitwig Studio and REAPER.
+
+
+LICENSE.md is VD-1's licence; THIRD-PARTY-NOTICES.md lists the parts of
+others it includes. More: https://vdsp-audio.com
